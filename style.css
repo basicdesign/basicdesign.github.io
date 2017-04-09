@@ -1,0 +1,101 @@
+html, body {
+  margin: 0;
+}
+
+canvas, #p5 {
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index: -1;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color:#333;
+  border-bottom: 2px dotted #333;
+}
+
+a:hover {
+
+}
+
+.break {
+  width: 60px;
+  height: 2px;
+  background: black;
+  margin: 40px 0;
+}
+
+.small-break {
+  width: 30px;
+  height: 2px;
+  background: black;
+  margin: 40px 0;
+}
+
+.all {
+  color: #333;
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.all img {
+  width: 100%;
+  margin:10px 0;
+}
+
+.all video {
+  width: 100%;
+  margin:10px 0;
+}
+
+.bottom {
+  margin-bottom: 40px;
+}
+
+.credits {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55em;
+  letter-spacing: 0.3px;
+}
+
+.credits li {
+  margin-bottom: 8px;
+}
+
+h1, h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.55em;
+  letter-spacing: 0.3px;
+}
+
+.icon {
+  display: flex;
+}
+
+.mail {
+  background-image: url('pics/mail.svg');
+  background-size: 25px 16px;
+  width: 25px;
+  height: 16px;
+  margin-top: 4px;
+  margin-right: 8px;
+}
