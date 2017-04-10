@@ -1,10 +1,12 @@
 /* jshint -W033*/
 
 // play videos on click
-$('video').click(function(){
-    $(this)[0].play()
-    $(this).attr("controls", "true")
-})
+$('video').each(function(){
+    this.onclick = function() {
+        this.setAttribute("controls", "true")
+        this.play()
+    }
+});
 
 // p5js background sketch
 var siz = 500
@@ -18,6 +20,9 @@ function setup() {
 
     rectMode(CENTER)
     noStroke()
+
+    siz = 500
+    if(width < 600) siz = 300
 
     blu = color(66, 133, 244)
     giallo = color(251, 188, 5)
