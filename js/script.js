@@ -1,11 +1,15 @@
 /* jshint -W033*/
 
+// matlo
+console.log('%cまてろ', 'color: #black; font-family: "Roboto Mono", monospace; font-size:42px')
+console.log('%cmatlo.me', 'color: #black; font-family: "Roboto Mono", monospace; font-size:18px')
+
 // play videos on click
 $('video').each(function(){
-    this.onclick = function() {
-        this.setAttribute("controls", "true")
-        this.play()
-    }
+    $(this).on('click touch', function () {
+        $(this).attr("controls", "true")
+        $(this)[0].play()
+    })
 });
 
 // p5js background sketch
