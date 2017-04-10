@@ -5,11 +5,18 @@ console.log('%cまてろ', 'color: #black; font-family: "Roboto Mono", monospace
 console.log('%cmatlo.me', 'color: #black; font-family: "Roboto Mono", monospace; font-size:18px')
 
 // play videos on click
-$('video').each(function(){
-    $(this).on('click touch', function () {
-        $(this).attr("controls", "true")
+// $('video').each(function(){
+//     $(this).on('click touch', function () {
+//         $(this).attr("controls", "true")
+//         $(this)[0].play()
+//     })
+// });
+
+$(document).ready(function(){
+    $('video').on('click touchstart', function() {
         $(this)[0].play()
-    })
+        $(this).attr("controls", "true")        
+    });
 });
 
 // p5js background sketch
