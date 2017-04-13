@@ -31,13 +31,12 @@ function setup() {
 
     rectMode(CENTER)
     noStroke()
-
     siz = 500
     if(width < 600) siz = 300
 
-    blu = color(66, 133, 244)
-    giallo = color(251, 188, 5)
-    rosso = color(234, 67, 53)
+    blu = color(10, 10, 200, 120)
+    giallo = color(255, 255, 0, 180)
+    rosso = color(255, 0, 0, 120)
 
     t = new Shape(random(width), random(height), 3)
     c = new Shape(random(width), random(height), 1)
@@ -45,7 +44,9 @@ function setup() {
 }
 
 function draw() {
-    background(255)
+    //background(255)
+    fill(255,70);
+    rect(width/2, height/2, width, height);
 
     t.update()
     c.update()
