@@ -34,26 +34,28 @@ function setup() {
     siz = 500
     if(width < 600) siz = 300
 
-    blu = color(10, 10, 200, 120)
-    giallo = color(255, 255, 0, 180)
-    rosso = color(255, 0, 0, 120)
+    blu = color(50, 80, 255)
+    giallo = color(255, 240, 70)
+    rosso = color(255, 60, 70)
 
-    t = new Shape(random(width), random(height), 3)
+    
     c = new Shape(random(width), random(height), 1)
     q = new Shape(random(width), random(height), 2)
+    t = new Shape(random(width), random(height), 3)
 }
 
 function draw() {
     //background(255)
-    fill(255,70);
+    fill(255,90);
     rect(width/2, height/2, width, height);
 
-    t.update()
+    
     c.update()
     q.update()
-    t.draw()
+    t.update()
     c.draw()
     q.draw()
+    t.draw()
 }
 
 function Shape(_x, _y, type) {
