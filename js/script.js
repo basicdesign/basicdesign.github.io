@@ -15,7 +15,7 @@ console.log('%cmatlo.me', 'color: #black; font-family: "Roboto Mono", monospace;
 $(document).ready(function(){
     $('video').on('click touchstart', function() {
         $(this)[0].play()
-        $(this).attr("controls", "true")        
+        $(this).attr("controls", "true")
     });
 });
 
@@ -38,18 +38,18 @@ function setup() {
     giallo = color(255, 240, 70)
     rosso = color(255, 60, 70)
 
-    
+
     c = new Shape(random(width), random(height), 1)
     q = new Shape(random(width), random(height), 2)
     t = new Shape(random(width), random(height), 3)
 }
 
 function draw() {
-    //background(255)
-    fill(255,90);
-    rect(width/2, height/2, width, height);
+    background(255)
+    // fill(255,90);
+    // rect(width/2, height/2, width, height);
 
-    
+
     c.update()
     q.update()
     t.update()
@@ -63,7 +63,7 @@ function Shape(_x, _y, type) {
     this.x = _x
     this.y = _y
     this.dx = _x
-	this.dy = _y
+	  this.dy = _y
     this.damp = 0.1
 
     this.update = function() {
@@ -119,8 +119,8 @@ function Shape(_x, _y, type) {
 
 	this.flyAwayFrom = function(xx,yy) {
 		var d = dist(this.x, this.y, xx, yy)
-		this.dx += (this.x - xx) / d * siz * .01
-		this.dy += (this.y - yy) / d * siz * .01
+		this.dx += (this.x - xx) / d * siz * .007
+		this.dy += (this.y - yy) / d * siz * .007
 	}
 
 }
